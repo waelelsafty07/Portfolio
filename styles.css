@@ -146,13 +146,16 @@ header {
     background-size: 100% 100%;
     width: 100%;
   }
+
   .navbar {
     display: flex;
     justify-content: space-between;
   }
+
   .navbar .navbar-btn {
     display: none;
   }
+
   .intro .container {
     width: 50%;
   }
@@ -161,10 +164,12 @@ header {
     font-size: 40px;
     line-height: 52px;
   }
+
   .intro .heading h1 span::before {
     content: "\A";
     white-space: normal;
   }
+
   .intro .bio p {
     font-size: 20px;
   }
