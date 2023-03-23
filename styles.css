@@ -212,6 +212,10 @@ header {
   line-height: 24px;
 }
 
+.work .card .card-body .card-btn button:hover {
+  color: #132f75;
+}
+
 /*
   About
 */
