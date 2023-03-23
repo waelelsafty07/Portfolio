@@ -223,65 +223,83 @@ header {
   border-radius: 1rem;
   margin: 1rem 0;
 }
+
 .about .heading h2 {
   font-weight: 700;
   line-height: 60px;
   color: #172b4d;
 }
 
-.about .bio p {
+.about .about-container .container .bio p {
   font-weight: 400;
   line-height: 24px;
   color: #344563;
 }
 
-.about .connect .connect-title p {
+.about .about-container .container .connect .connect-title p {
   font-weight: 500;
   line-height: 24px;
   color: #7f8cff;
   margin: 1rem 0;
 }
 
-.about .connect .connect-list .unorderd-list {
+.about .about-container .container .connect .connect-list .unorderd-list {
   list-style: none;
   display: flex;
   justify-content: flex-start;
   padding: 0;
 }
 
-.about .connect .connect-list .unorderd-list li {
+.about .about-container .container .connect .connect-list .unorderd-list li {
   margin-right: 1rem;
 }
 
-.about .connect .connect-list .unorderd-list li i {
+.about .about-container .container .connect .connect-list .unorderd-list li i {
   font-size: 25px;
   color: #505f79;
 }
 
-.about .about-tech ul {
+.about .about-container .about-tech .drop {
   list-style: none;
 }
-.about .about-tech .drop > li {
+
+.about .about-tech .drop > .drop-link {
   margin: 1rem 0;
   font-weight: 500;
   font-size: 20px;
 }
-.about .about-tech .drop > li i {
+
+.about .about-tech .drop > .drop-link .fa-angle-down,
+.about .about-tech .drop > .drop-link .fa-angle-right {
   color: #acb7c3;
 }
 
-.about .about-tech .drop > li::after {
+.about .about-tech .drop > .drop-link .fa-brands {
+  margin: 0 1rem;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .about-tech .drop > .drop-link::after {
   content: "";
   border-bottom: 1px solid #dfe1e6;
   display: block;
   width: 90%;
 }
+
 .border-none::after {
   content: "";
   border-bottom: none !important;
   display: block;
   width: 90%;
 }
+
 .about .about-tech .drop > li span {
   display: flex;
   width: 89%;
@@ -292,9 +310,12 @@ header {
   padding: 1rem;
   font-size: 15px;
   color: #253858;
+  list-style: none;
 }
 
-.about .about-tech .drop .drop-item li {
+.about .about-tech .drop .drop-link .drop-item .drop-down {
+  display: flex;
+  align-items: center;
   margin: 1rem 0;
   padding: 1rem;
   background-color: #f7f7f9;
@@ -346,6 +367,7 @@ header {
   .work .card .card-body .card-title {
     width: 50%;
   }
+
   .about {
     display: flex;
     flex-direction: column;
