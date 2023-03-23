@@ -321,6 +321,17 @@ header {
   background-color: #f7f7f9;
 }
 
+.bg-html-color {
+  background-color: #f5600f;
+}
+
+.bg-css-color {
+  background-color: #149fc2;
+}
+
+.bg-js-color {
+  background-color: #d3e109;
+}
 /*
     Media Query
 */
