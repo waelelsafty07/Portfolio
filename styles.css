@@ -1,0 +1,180 @@
+/*
+    Box Sizing
+*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 18px;
+  width: 76px;
+  height: 20px;
+  color: #6070ff;
+  display: flex;
+  margin: 0 20px;
+}
+
+.navbar .navbar-btn {
+  background: none;
+  border: none;
+  color: #6070ff;
+  width: 40px;
+  height: 40px;
+  margin: 0 20px;
+}
+
+.navbar .navbar-btn i {
+  background: none;
+  border: none;
+  color: #6070ff;
+  font-size: 18px;
+}
+
+.intro {
+  height: calc(100% - 72px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro .container {
+  width: 50%;
+}
+
+.intro .heading h1 {
+  font-weight: 700;
+  line-height: 60px;
+  color: #172b4d;
+}
+
+.intro .bio p {
+  font-weight: 400;
+  line-height: 24px;
+  color: #344563;
+}
+
+.intro .connect .connect-title p {
+  font-weight: 500;
+  line-height: 24px;
+  color: #7f8cff;
+  margin: 1rem 0;
+}
+
+.intro .connect .connect-list .unorderd-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.intro .connect .connect-list .unorderd-list li {
+  margin-right: 1rem;
+}
+
+.intro .connect .connect-list .unorderd-list li i {
+  font-size: 25px;
+  color: #505f79;
+}
+
+/*
+    Media Query
+*/
+@media screen and (min-width: 375px) {
+  .intro {
+    background-image: url("images/header-shapes\ mobile@2x.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .intro .container {
+    width: 90%;
+  }
+
+  .intro .heading h1 {
+    font-size: 48px;
+    line-height: 80px;
+  }
+
+  .intro .heading h1 span::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .intro .bio p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    background-image: url("images/Header\ bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar .navbar-btn {
+    display: none;
+  }
+
+  .intro .container {
+    width: 50%;
+  }
+
+  .intro .heading h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .intro .heading h1 span::before {
+    content: "\A";
+    white-space: normal;
+  }
+
+  .intro .bio p {
+    font-size: 20px;
+  }
+
+  .intro .connect .connect-title p {
+    font-size: 16px;
+  }
+}
