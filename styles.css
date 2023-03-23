@@ -108,7 +108,7 @@ header {
 */
 @media screen and (min-width: 375px) {
   .intro {
-    background-image: url("/images/header-shapes\ mobile@2x.svg");
+    background-image: url("images/header-shapes\ mobile@2x.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -140,7 +140,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .intro {
-    background-image: url("/images/Header\ bg.svg");
+    background-image: url("images/Header\ bg.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
