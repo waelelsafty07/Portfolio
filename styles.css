@@ -14,6 +14,7 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
+  background-color: #e5e5e5;
 }
 
 a {
@@ -22,6 +23,8 @@ a {
 
 header {
   height: 100vh;
+  background-color: #fff;
+  border-bottom-left-radius: 16%;
 }
 
 .navbar {
@@ -57,6 +60,7 @@ header {
 }
 
 .intro {
+  border-bottom-left-radius: 10%;
   height: calc(100% - 72px);
   display: flex;
   justify-content: center;
@@ -104,6 +108,236 @@ header {
 }
 
 /*
+  Work Section
+*/
+.work {
+  margin-top: 6rem;
+  display: grid;
+}
+
+.work .project {
+  margin-bottom: 6rem;
+  width: 100%;
+  display: flex;
+}
+
+.work .card {
+  width: 90%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.work .card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.work .card .card-body {
+  width: 100%;
+}
+
+.work .card .card-body .card-title {
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin: 1rem 0;
+}
+
+.work .card .card-body .card-client-info ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.work .card .card-body .card-client-info ul li {
+  flex: 1;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.db-color {
+  color: #344563;
+}
+
+.bg-color {
+  color: #7a869a;
+}
+
+.work .card .card-body .card-client-info ul li::marker {
+  color: #c1c7d0;
+}
+
+.work .card .card-body .card-client-info ul .none-style {
+  list-style: none;
+}
+
+.work .card .card-body .card-pragrph {
+  width: 70%;
+  margin: 1rem 0;
+}
+
+.work .card .card-body .card-pragrph p {
+  color: #344563;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.work .card .card-body .card-tech ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.work .card .card-body .card-tech ul li {
+  color: #6070ff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  background: #ebebff;
+  border-radius: 8px;
+  margin: 1rem 1rem 1rem 0;
+  padding: 0.5rem;
+}
+
+.work .card .card-body .card-btn button {
+  background: none;
+  padding: 0.5rem;
+  border: 1px solid #396df2;
+  border-radius: 9px;
+  color: #396df2;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.work .card .card-body .card-btn button:hover {
+  color: #132f75;
+}
+
+/*
+  About
+*/
+
+.about .about-container {
+  width: 90%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+.about .heading h2 {
+  font-weight: 700;
+  line-height: 60px;
+  color: #172b4d;
+}
+
+.about .about-container .container .bio p {
+  font-weight: 400;
+  line-height: 24px;
+  color: #344563;
+}
+
+.about .about-container .container .connect .connect-title p {
+  font-weight: 500;
+  line-height: 24px;
+  color: #7f8cff;
+  margin: 1rem 0;
+}
+
+.about .about-container .container .connect .connect-list .unorderd-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.about .about-container .container .connect .connect-list .unorderd-list li {
+  margin-right: 1rem;
+}
+
+.about .about-container .container .connect .connect-list .unorderd-list li i {
+  font-size: 25px;
+  color: #505f79;
+}
+
+.about .about-container .about-tech .drop {
+  list-style: none;
+}
+
+.about .about-tech .drop > .drop-link {
+  margin: 1rem 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.about .about-tech .drop > .drop-link .fa-angle-down,
+.about .about-tech .drop > .drop-link .fa-angle-right {
+  color: #acb7c3;
+}
+
+.about .about-tech .drop > .drop-link .fa-brands {
+  margin: 0 1rem;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .about-tech .drop > .drop-link::after {
+  content: "";
+  border-bottom: 1px solid #dfe1e6;
+  display: block;
+  width: 90%;
+}
+
+.border-none::after {
+  content: "";
+  border-bottom: none !important;
+  display: block;
+  width: 90%;
+}
+
+.about .about-tech .drop > li span {
+  display: flex;
+  width: 89%;
+  justify-content: space-between;
+}
+
+.about .about-tech .drop .drop-item {
+  padding: 1rem;
+  font-size: 15px;
+  color: #253858;
+  list-style: none;
+}
+
+.about .about-tech .drop .drop-link .drop-item .drop-down {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f7f7f9;
+}
+
+.bg-html-color {
+  background-color: #f5600f;
+}
+
+.bg-css-color {
+  background-color: #149fc2;
+}
+
+.bg-js-color {
+  background-color: #d3e109;
+}
+
+/*
     Media Query
 */
 @media screen and (min-width: 375px) {
@@ -125,7 +359,7 @@ header {
 
   .intro .heading h1 {
     font-size: 48px;
-    line-height: 80px;
+    margin: 4rem 0 1rem;
   }
 
   .intro .heading h1 span::before {
@@ -135,6 +369,25 @@ header {
 
   .intro .bio p {
     font-size: 16px;
+  }
+
+  .work {
+    grid-template-columns: 100%;
+  }
+
+  .work .project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work .card .card-body .card-title {
+    width: 50%;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
