@@ -60,6 +60,10 @@ header {
 }
 
 .intro {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 100%;
   border-bottom-left-radius: 10%;
   height: calc(100% - 72px);
   display: flex;
@@ -93,8 +97,9 @@ header {
 
 .intro .connect .connect-list .unorderd-list {
   list-style: none;
-  display: flex;
-  justify-content: flex-start;
+  float: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
 }
 
@@ -249,8 +254,9 @@ header {
 
 .about .about-container .container .connect .connect-list .unorderd-list {
   list-style: none;
-  display: flex;
-  justify-content: flex-start;
+  float: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0;
 }
 
@@ -343,9 +349,6 @@ header {
 @media screen and (min-width: 375px) {
   .intro {
     background-image: url("images/header-shapes\ mobile@2x.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
   }
 
   .navbar {
@@ -394,10 +397,6 @@ header {
 @media screen and (min-width: 768px) {
   .intro {
     background-image: url("images/Header\ bg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    width: 100%;
   }
 
   .navbar {
