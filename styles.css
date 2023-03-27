@@ -190,11 +190,14 @@ header {
 }
 
 .work .card .card-body .card-tech ul {
+  float: left;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  /* display: flex; */
   list-style: none;
-  display: flex;
+  /* display: flex; */
   justify-content: flex-start;
 }
-
 .work .card .card-body .card-tech ul li {
   color: #6070ff;
   font-weight: 500;
