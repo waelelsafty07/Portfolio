@@ -377,6 +377,11 @@ footer {
   width: 80%;
 }
 
+input::placeholder {
+  font-weight: 600;
+  font-size: 17px;
+}
+
 input,
 textarea {
   margin: 1rem 0;
