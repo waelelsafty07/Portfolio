@@ -314,11 +314,7 @@ header {
   padding: 1rem;
   font-size: 15px;
   color: #253858;
-  /* list-style: none; */
-  float: left;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 100%;
+  list-style: none;
 }
 
 .about .about-tech .drop .drop-link .drop-item .drop-down {
