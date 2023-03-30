@@ -418,9 +418,11 @@ textarea {
 .contact-btn {
   background-color: #fff;
 }
+
 .gray-color {
   color: #344563;
 }
+
 /*
     Media Query
 */
@@ -602,6 +604,7 @@ Desktop
   .about .about-container .about-tech .drop-item {
     display: flex;
     gap: 1rem;
+    padding-left: 0;
   }
 
   .drop-down {
@@ -623,8 +626,5 @@ Desktop
 
   footer .contact-body .contact-paragraph {
     width: 40%;
-  }
-  .about .about-container .drop-item {
-    padding-left: 0;
   }
 }
