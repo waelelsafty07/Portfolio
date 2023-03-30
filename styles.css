@@ -153,7 +153,7 @@ header {
 .work .card .card-body .card-client-info ul {
   display: flex;
   justify-content: flex-start;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .work .card .card-body .card-client-info ul li {
@@ -255,18 +255,39 @@ footer .about .about-container .container .connect .connect-title p {
   margin: 1rem 0;
 }
 
-footer .about .about-container .container .connect .connect-list .unorderd-list {
+footer
+  .about
+  .about-container
+  .container
+  .connect
+  .connect-list
+  .unorderd-list {
   list-style: none;
   display: flex;
   justify-content: flex-start;
   padding: 0;
 }
 
-footer .about .about-container .container .connect .connect-list .unorderd-list li {
+footer
+  .about
+  .about-container
+  .container
+  .connect
+  .connect-list
+  .unorderd-list
+  li {
   margin-right: 1rem;
 }
 
-footer .about .about-container .container .connect .connect-list .unorderd-list li i {
+footer
+  .about
+  .about-container
+  .container
+  .connect
+  .connect-list
+  .unorderd-list
+  li
+  i {
   font-size: 25px;
   color: #505f79;
 }
@@ -320,7 +341,6 @@ footer .about .about-tech .drop > li span {
 }
 
 footer .about .about-tech .drop .drop-item {
-  padding: 1rem;
   font-size: 15px;
   color: #253858;
   list-style: none;
@@ -328,7 +348,6 @@ footer .about .about-tech .drop .drop-item {
 
 footer .about .about-tech .drop .drop-link .drop-item .drop-down {
   display: flex;
-  align-items: center;
   margin: 1rem 0;
   padding: 1rem;
   background-color: #f7f7f9;
@@ -399,7 +418,9 @@ textarea {
 .contact-btn {
   background-color: #fff;
 }
-
+.gray-color {
+  color: #344563;
+}
 /*
     Media Query
 */
@@ -482,6 +503,10 @@ textarea {
     font-size: 40px;
     line-height: 52px;
   }
+
+  .drop-down {
+    align-items: center;
+  }
 }
 
 /*
@@ -562,11 +587,12 @@ Desktop
 
   .about .about-container {
     display: flex;
-    padding: 10rem 2rem;
+    padding: 10rem 0;
+    gap: 4rem;
   }
 
   .about .about-container .container {
-    width: 40%;
+    width: 30%;
   }
 
   .about .about-container .about-tech {
@@ -579,11 +605,8 @@ Desktop
   }
 
   .drop-down {
+    align-items: center;
     flex-direction: column;
-    margin: 1rem 0;
-  }
-
-  .drop-down i {
     margin: 1rem 0;
   }
 
@@ -600,5 +623,8 @@ Desktop
 
   footer .contact-body .contact-paragraph {
     width: 40%;
+  }
+  .about .about-container .drop-item {
+    padding-left: 0;
   }
 }
