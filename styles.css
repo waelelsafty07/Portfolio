@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+.none-style {
+  list-style: none;
+}
+
 header {
   height: 100vh;
   background-color: #fff;
@@ -29,14 +33,20 @@ header {
 
 .navbar {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 72px;
+}
+
+.navbar-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
 }
 
 .navbar .navbar-brand {
   font-weight: 700;
   font-size: 18px;
-  width: 76px;
   height: 20px;
   color: #6070ff;
   display: flex;
@@ -57,6 +67,11 @@ header {
   border: none;
   color: #6070ff;
   font-size: 18px;
+}
+
+.navbar .nav-list {
+  display: flex;
+  gap: 1rem;
 }
 
 .intro {
@@ -128,15 +143,6 @@ header {
   border-radius: 1rem;
 }
 
-.work .card .card-image img {
-  width: 100%;
-  height: 100%;
-}
-
-.work .card .card-body {
-  width: 100%;
-}
-
 .work .card .card-body .card-title {
   font-size: 32px;
   line-height: 44px;
@@ -147,10 +153,10 @@ header {
 .work .card .card-body .card-client-info ul {
   display: flex;
   justify-content: flex-start;
+  gap: 5rem;
 }
 
 .work .card .card-body .card-client-info ul li {
-  flex: 1;
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
@@ -166,10 +172,6 @@ header {
 
 .work .card .card-body .card-client-info ul li::marker {
   color: #c1c7d0;
-}
-
-.work .card .card-body .card-client-info ul .none-style {
-  list-style: none;
 }
 
 .work .card .card-body .card-pragrph {
@@ -201,8 +203,7 @@ header {
   padding: 0.5rem;
 }
 
-.work .card .card-body .card-btn button,
-.button-touch {
+button {
   background: none;
   padding: 0.5rem;
   border: 1px solid #396df2;
@@ -213,7 +214,7 @@ header {
   line-height: 24px;
 }
 
-.work .card .card-body .card-btn button:hover {
+button:hover {
   color: #132f75;
 }
 
@@ -221,13 +222,12 @@ header {
   About
 */
 footer {
+  border-top-right-radius: 8rem;
   background-color: #fff;
 }
 
 footer .about .about-container {
   width: 90%;
-  background-color: #fff;
-  padding: 1rem;
   border-radius: 1rem;
   margin: 1rem 0;
 }
@@ -242,6 +242,10 @@ footer .about .about-container .container .bio p {
   font-weight: 400;
   line-height: 24px;
   color: #344563;
+}
+
+footer .about .about-container .container .connect .connect-btn {
+  margin: 3rem 0;
 }
 
 footer .about .about-container .container .connect .connect-title p {
@@ -283,7 +287,8 @@ footer .about .about-tech .drop > .drop-link .fa-angle-right {
 }
 
 footer .about .about-tech .drop > .drop-link .fa-brands {
-  margin: 0 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   font-size: 2rem;
   width: 4rem;
   height: 4rem;
@@ -374,10 +379,6 @@ footer .contact-body {
   width: 80%;
 }
 
-footer .container-form {
-  width: 80%;
-}
-
 input::placeholder {
   font-weight: 600;
   font-size: 17px;
@@ -410,9 +411,13 @@ textarea {
     background-size: 100% 100%;
   }
 
-  .navbar {
+  .navbar-container {
     display: flex;
     justify-content: space-between;
+  }
+
+  .navbar .nav-list {
+    display: none;
   }
 
   .intro .container {
@@ -442,8 +447,12 @@ textarea {
     align-items: center;
   }
 
-  .work .card .card-body .card-title {
-    width: 50%;
+  .work .card .card-image img {
+    width: 100%;
+  }
+
+  .work .card .card-body {
+    width: 100%;
   }
 
   footer .about {
@@ -475,6 +484,9 @@ textarea {
   }
 }
 
+/*
+Desktop
+*/
 @media screen and (min-width: 768px) {
   .intro {
     background-image: url("images/Header\ bg.svg");
@@ -484,9 +496,8 @@ textarea {
     width: 100%;
   }
 
-  .navbar {
+  .navbar .nav-list {
     display: flex;
-    justify-content: space-between;
   }
 
   .navbar .navbar-btn {
@@ -513,5 +524,81 @@ textarea {
 
   .intro .connect .connect-title p {
     font-size: 16px;
+  }
+
+  .card {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .project:nth-child(even) .card {
+    flex-direction: row-reverse;
+  }
+
+  .card .card-image {
+    width: 100%;
+  }
+
+  .card .card-image img {
+    width: 100%;
+  }
+
+  .card .card-body {
+    width: 50%;
+    margin: 3rem 0 0 2rem;
+  }
+
+  .card .card-body .card-title {
+    width: 100%;
+  }
+
+  .card .card-body .card-client-info {
+    margin: 1rem 0;
+  }
+
+  .card-btn {
+    margin: 4rem 0;
+  }
+
+  .about .about-container {
+    display: flex;
+    padding: 10rem 2rem;
+  }
+
+  .about .about-container .container {
+    width: 40%;
+  }
+
+  .about .about-container .about-tech {
+    width: 70%;
+  }
+
+  .about .about-container .about-tech .drop-item {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .drop-down {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .drop-down i {
+    margin: 1rem 0;
+  }
+
+  .contact {
+    background-color: #6070ff;
+    background-image: url("images/contact\ form\ background\ shapes.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  footer .container-form {
+    width: 40%;
+  }
+
+  footer .contact-body .contact-paragraph {
+    width: 40%;
   }
 }
