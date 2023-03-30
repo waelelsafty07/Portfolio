@@ -255,39 +255,18 @@ footer .about .about-container .container .connect .connect-title p {
   margin: 1rem 0;
 }
 
-footer
-  .about
-  .about-container
-  .container
-  .connect
-  .connect-list
-  .unorderd-list {
+footer .about .about-container .container .connect .connect-list .unorderd-list {
   list-style: none;
   display: flex;
   justify-content: flex-start;
   padding: 0;
 }
 
-footer
-  .about
-  .about-container
-  .container
-  .connect
-  .connect-list
-  .unorderd-list
-  li {
+footer .about .about-container .container .connect .connect-list .unorderd-list li {
   margin-right: 1rem;
 }
 
-footer
-  .about
-  .about-container
-  .container
-  .connect
-  .connect-list
-  .unorderd-list
-  li
-  i {
+footer .about .about-container .container .connect .connect-list .unorderd-list li i {
   font-size: 25px;
   color: #505f79;
 }
