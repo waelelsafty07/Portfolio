@@ -17,13 +17,25 @@
         <nav class="navbar">
             <div class="navbar-container">
                 <a class="navbar-brand" href="/">My Logo</a>
-                <button class="navbar-btn">
-                    <i class="fa-solid fa-bars"></i>
+                <button id="navbar-btn" class="navbar-btn">
+                    <i id="icon-btn" class="fa-solid fa-bars"></i>
                 </button>
-                <ul class="none-style nav-list">
-                    <li>Portfolio</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <ul id="nav-list" class="none-style nav-list">
+                    <li>
+                        <a href="#work">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#About">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Contact">
+                            Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -77,7 +89,7 @@
         </div>
             
     </header>
-    <section class="work">
+    <section class="work" id="work">
         <div class="project">
             <div class="card">
                 <div class="card-image">
@@ -220,7 +232,7 @@
         </div>
     </section>
     <footer>
-        <section class="about">
+        <section class="about" id="About">
             <div class="about-container">
                 <div class="container">
                     <div class="heading">
@@ -299,7 +311,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="Contact">
             <div class="contact-form-container flex-box">
                 <div class="contact-body flex-box">
                     <div class="contact-title">
@@ -332,5 +344,6 @@
             </div>
         </section>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
