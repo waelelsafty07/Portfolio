@@ -66,7 +66,7 @@ const Projects = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     image: 'images/Snapshoot Portfolio (1).svg',
-    technologies: ['react', 'html', 'css', 'javascript'],
+    technologies: 'k',
     linkLive: 'https://waelelsafty07.github.io/Portfolio/',
     linkSource: 'https://github.com/waelelsafty07/Portfolio',
   },
@@ -74,7 +74,6 @@ const Projects = [
 
 const repeatList = (list, text) => {
   const fragment = document.createDocumentFragment();
-
   list.forEach((item, index) => {
     const li = document.createElement('li');
     if (text === 'info') {
@@ -89,7 +88,13 @@ const repeatList = (list, text) => {
   return fragment;
 };
 
+const checkString = (tech) => tech.every((t) => typeof t === 'string');
+
 const createProject = (project) => {
+  const tech = project.technologies;
+  if (!Array.isArray(tech) || !checkString(tech)) {
+    throw new TypeError('Technologies must be an array of strings');
+  }
   const projectDiv = document.createElement('div');
   projectDiv.className = 'project';
   const cardDiv = document.createElement('div');
@@ -146,10 +151,26 @@ const createProject = (project) => {
   cardDiv.appendChild(cardBodyDiv);
   projectDiv.appendChild(cardDiv);
   work.appendChild(projectDiv);
+  return true;
 };
 
+const Fields = [
+  'name',
+  'description',
+  'image',
+  'technologies',
+  'linkLive',
+  'linkSource',
+];
+const validate = (project, field) => {
+  const obj = Object.prototype.hasOwnProperty.call(project, field);
+  return obj;
+};
+const required = (project) => Fields.every((field) => validate(project, field));
+
 Projects.forEach((project) => {
-  createProject(project);
+  const allRequiredFields = required(project);
+  if (allRequiredFields) createProject(project);
 });
 
 const cardBtn = document.querySelectorAll('.card-btn button');
@@ -171,16 +192,20 @@ const addDetailsToModel = (project) => {
   technologies.appendChild(list);
 };
 
-cardBtns.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    addDetailsToModel(Projects[index]);
-    model.classList.toggle('d-none');
+if (cardBtns) {
+  cardBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      addDetailsToModel(Projects[index]);
+      model.classList.toggle('d-none');
+    });
   });
-});
+}
 
-modelBtn.addEventListener('click', () => {
-  model.classList.add('d-none');
-});
+if (modelBtn) {
+  modelBtn.addEventListener('click', () => {
+    model.classList.add('d-none');
+  });
+}
 
 document.addEventListener('click', (event) => {
   if (!modelBtn.contains(event.target) && !model.contains(event.target)) {
