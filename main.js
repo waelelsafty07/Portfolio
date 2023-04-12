@@ -236,3 +236,36 @@ if (formSubmit) {
     return true;
   });
 }
+
+// preserve Data
+const inputName = document.querySelector('#name');
+const inputMessage = document.querySelector('#message');
+
+const savedData = localStorage.getItem('contact-data');
+const formData = savedData ? JSON.parse(savedData) : {};
+
+const saveFormData = () => {
+  // Save the entire form data object to local storage
+  localStorage.setItem('contact-data', JSON.stringify(formData));
+};
+
+// Save data to local storage when the input changes
+inputName.addEventListener('input', () => {
+  formData.name = inputName.value;
+  saveFormData();
+});
+// Save data to local storage when the input changes
+inputEmail.addEventListener('input', () => {
+  formData.email = inputEmail.value;
+  saveFormData();
+});
+// Save data to local storage when the input changes
+inputMessage.addEventListener('input', () => {
+  formData.message = inputMessage.value;
+  saveFormData();
+});
+
+// Pre-fill the input fields with saved data
+inputName.value = formData.name || '';
+inputEmail.value = formData.email || '';
+inputMessage.value = formData.message || '';
