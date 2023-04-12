@@ -185,19 +185,20 @@
                 </div>
                 <div class="container-form">
                     <div class="contact-form ">
-                        <form action="https://formspree.io/f/mgebnweb"
+                        <form id="contactForm" action="https://formspree.io/f/mgebnweb"
                         method="POST">
                             <div class="input-field">
                                 <input type="text" maxlength="30" placeholder="Lorem Ipsum" required>
                             </div>
                             <div class="input-field">
-                                <input type="email" placeholder="loremipsum@gmail.com" required>
+                                <input id="email" type="email" placeholder="loremipsum@gmail.com" required>
                             </div>
                             <div class="input-field message">
                                 <textarea name="message" maxlength="500" cols="30" rows="10" placeholder="Write your message here..." required></textarea>
                             </div>
+                            
                             <div class="">
-                                <button class="button-touch contact-btn">Get in touch</button>
+                                <button class="button-touch contact-btn" id="submit">Get in touch</button>
                             </div>
                         </form>
                     </div>
