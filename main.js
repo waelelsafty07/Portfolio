@@ -66,7 +66,7 @@ const Projects = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     image: 'images/Snapshoot Portfolio (1).svg',
-    technologies: 'k',
+    technologies: ['k'],
     linkLive: 'https://waelelsafty07.github.io/Portfolio/',
     linkSource: 'https://github.com/waelelsafty07/Portfolio',
   },
@@ -212,3 +212,27 @@ document.addEventListener('click', (event) => {
     popupMenu.classList.remove('d-none');
   }
 });
+
+// contact
+const formSubmit = document.querySelector('#contactForm');
+const inputEmail = document.querySelector('#email');
+const errorUl = document.querySelector('#errorList');
+const isLowerCase = (str) => str === str.toLowerCase();
+
+if (formSubmit) {
+  formSubmit.addEventListener('submit', (event) => {
+    const valueEmail = inputEmail.value;
+    errorUl.textContent = '';
+    if (!isLowerCase(valueEmail)) {
+      event.preventDefault();
+      const li = document.createElement('li');
+      const liText = document.createTextNode('Email Must be lowercase');
+      li.appendChild(liText);
+      errorUl.appendChild(li);
+      errorUl.style.color = 'red';
+
+      return false;
+    }
+    return true;
+  });
+}
