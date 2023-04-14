@@ -47,7 +47,7 @@ navbarBtn.addEventListener('click', () => {
   navbarBtn.classList.toggle('navbar-btn-close');
   iconBtn.classList.toggle('fa-xmark');
   popupMenu.classList.toggle('show');
-  const scrollClick = document.querySelectorAll('.menu-mobile li a');
+  const scrollClick = document.querySelector('.menu-mobile li a');
   scrollClickFunction(scrollClick);
 });
 
